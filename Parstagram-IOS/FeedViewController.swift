@@ -12,6 +12,8 @@ import AlamofireImage
 class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
   
     var posts = [PFObject]()
+    var numberOfPosts = 20;
+    let refreshControl = UIRefreshControl()
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -26,6 +28,13 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        loadPosts()
+        refreshControl.addTarget(self, action: #selector(loadPosts), for: .valueChanged)
+        tableView.refreshControl = refreshControl
+        
+    }
+    
+    @objc func loadPosts(){
         let query = PFQuery(className:"Posts")
         query.includeKey("author")
         query.limit = 20
@@ -33,10 +42,13 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             if posts != nil {
                 self.posts = posts!
                 self.tableView.reloadData()
+                self.refreshControl.endRefreshing()
             }
             
         }
+        
     }
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             return posts.count
