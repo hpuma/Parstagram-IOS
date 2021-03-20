@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -85,7 +86,7 @@
         <!--Feed View Controller-->
         <scene sceneID="MBN-Z0-EVt">
             <objects>
-                <viewController id="Omb-QA-8Of" customClass="FeedViewController" customModule="Parstagram_IOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController wantsFullScreenLayout="YES" id="Omb-QA-8Of" customClass="FeedViewController" customModule="Parstagram_IOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FlR-lb-qWf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -146,7 +147,14 @@
                         <viewLayoutGuide key="safeArea" id="Bg4-hx-bni"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <navigationItem key="navigationItem" id="NrI-7G-ZRD">
+                        <barButtonItem key="leftBarButtonItem" title="Log out" id="47P-iB-KMI">
+                            <imageReference key="image" image="power" catalog="system" symbolScale="large" renderingMode="original"/>
+                            <connections>
+                                <action selector="userLogout:" destination="Omb-QA-8Of" id="ymh-YC-hbA"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="+" image="insta_camera_btn" id="eS4-7E-ko5">
                             <connections>
                                 <segue destination="60Y-7j-XXq" kind="modal" id="SXW-2b-5va"/>
@@ -235,6 +243,7 @@
         <image name="image_placeholder" width="375" height="375"/>
         <image name="insta_camera_btn" width="25" height="25"/>
         <image name="instagram_logo" width="255" height="108"/>
+        <image name="power" catalog="system" width="128" height="124"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

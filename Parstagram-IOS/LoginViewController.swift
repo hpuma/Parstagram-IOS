@@ -25,7 +25,14 @@ class LoginViewController: UIViewController {
         PFUser.logInWithUsername(inBackground: username, password: password) { (user, error) in
             if user != nil {
                 self.performSegue(withIdentifier: "loginSegue", sender: nil)
+                self.usernameField.text?.removeAll()
+                self.passwordField.text?.removeAll()
             } else {
+                let alert = UIAlertController(title: "Invalid Login", message: "Please enter valid credentials", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+                NSLog("The \"OK\" alert occured.")
+                }))
+                self.present(alert, animated: true, completion: nil)
                 print("Error: \(String(describing: error?.localizedDescription))")
             }
         }
