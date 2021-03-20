@@ -95,7 +95,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="423" id="la2-Mg-I8f">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="423" id="la2-Mg-I8f" customClass="PostCell" customModule="Parstagram_IOS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="423"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="la2-Mg-I8f" id="iFv-mB-T73">
@@ -134,6 +134,11 @@
                                                 <constraint firstItem="hEa-L2-axh" firstAttribute="leading" secondItem="iFv-mB-T73" secondAttribute="leading" constant="8" id="ymE-Mi-ZmP"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="captionLabel" destination="9NJ-2l-PHe" id="0l8-RO-muM"/>
+                                            <outlet property="photoView" destination="bzW-6M-lcQ" id="EAG-VL-dHb"/>
+                                            <outlet property="usernameLabel" destination="hEa-L2-axh" id="YRv-vz-Mxa"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -148,6 +153,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="GcD-hP-JTt" id="CUr-49-pYu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y6H-2m-y0w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

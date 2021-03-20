@@ -16,6 +16,7 @@
 		B0A5CCDA2605B89D007354A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0A5CCD82605B89D007354A0 /* LaunchScreen.storyboard */; };
 		B0A5CCE42605B948007354A0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A5CCE32605B948007354A0 /* LoginViewController.swift */; };
 		B0A5CCE72605B959007354A0 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A5CCE62605B959007354A0 /* FeedViewController.swift */; };
+		B0BE195C2605D051003AB985 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BE195B2605D051003AB985 /* PostCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		B0A5CCDB2605B89D007354A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0A5CCE32605B948007354A0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B0A5CCE62605B959007354A0 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		B0BE195B2605D051003AB985 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		B8C4C2EE48F39691C595D34E /* Pods_Parstagram_IOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Parstagram_IOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8F580A34123E279C5295E6F /* Pods-Parstagram-IOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Parstagram-IOS.release.xcconfig"; path = "Target Support Files/Pods-Parstagram-IOS/Pods-Parstagram-IOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,6 +87,7 @@
 				B0A5CCE32605B948007354A0 /* LoginViewController.swift */,
 				B0A5CCE62605B959007354A0 /* FeedViewController.swift */,
 				B05CB68F2605C40B00AE798E /* CameraViewController.swift */,
+				B0BE195B2605D051003AB985 /* PostCell.swift */,
 			);
 			path = "Parstagram-IOS";
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 				B0A5CCCE2605B89D007354A0 /* AppDelegate.swift in Sources */,
 				B0A5CCE72605B959007354A0 /* FeedViewController.swift in Sources */,
 				B0A5CCD02605B89D007354A0 /* SceneDelegate.swift in Sources */,
+				B0BE195C2605D051003AB985 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
