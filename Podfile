@@ -9,5 +9,6 @@ target 'Parstagram-IOS' do
   pod 'Parse'
   pod 'AlamofireImage'
   pod 'Parse'
+  pod 'MessageInputBar'
 
 end
